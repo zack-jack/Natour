@@ -1,0 +1,26 @@
+{
+  "name": "natour",
+  "version": "1.0.0",
+  "description": "A website for nature tours",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zackjacksongit/natour.git"
+  },
+  "keywords": [
+    "Nature"
+  ],
+  "author": "Zack Jackson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zackjacksongit/natour/issues"
+  },
+  "homepage": "https://github.com/zackjacksongit/natour#readme",
+  "devDependencies": {
+    "browser-sync": "^2.24.6",
+    "gulp": "^3.9.1"
+  }
+}
