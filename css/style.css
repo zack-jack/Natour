@@ -91,6 +91,8 @@ body {
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
+  /* -- Hack to remove animation shaking -- */
+  backface-visibility: hidden;
 }
 
 .heading-primary-main {
@@ -98,6 +100,8 @@ body {
   font-size: 85px;
   font-weight: 100;
   letter-spacing: 30px;
+
+  animation: moveInLeft 1.5s ease-out;
 }
 
 .heading-primary-subtext {
@@ -105,4 +109,32 @@ body {
   font-size: 20px;
   font-weight: 400;
   letter-spacing: 17px;
+
+  animation: moveInRight 1.5s ease-out;
+}
+
+/* ----- HEADING ANIMATIONS ----- */
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
 }
