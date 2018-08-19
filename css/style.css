@@ -2,11 +2,12 @@
 /*       PROJECT COLORS      */
 /* ========================= */
 
-/* ----- ACCENT COLORS ----- */
+/* ----- COLORS ----- */
 /*
 Light green: #7ed56f;
 Medium green: #55c57a;
 Dark green: #28b485;
+White: #fff;
 */
 
 /* ----- FONT COLORS ----- */
@@ -25,13 +26,17 @@ grey: #777;
   box-sizing: border-box;
 }
 
+html {
+  /* sets base 10 for easier rem calculations */
+  font-size: 10px;
+}
+
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-size: 16px;
   line-height: 1.7;
   color: #777;
-  padding: 30px;
+  padding: 3rem;
 }
 
 /* ========================= */
@@ -47,7 +52,7 @@ body {
       rgba(128, 214, 113, 0.75),
       rgba(40, 180, 131, 0.75) 60%
     ),
-    url("../img/hero-cropped.jpg");
+    url("../img/hero.jpg");
   background-size: cover;
   background-position: top;
   position: relative;
@@ -59,23 +64,23 @@ body {
 
 .logo-box {
   position: absolute;
-  top: 40px;
-  left: 40px;
+  top: 4rem;
+  left: 4rem;
 }
 
 .logo {
   float: left;
-  height: 35px;
+  height: 3.5rem;
 }
 
 .company-name {
   display: inline-block;
   color: #fff;
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 400;
-  letter-spacing: 17px;
+  letter-spacing: 1.7rem;
   text-transform: uppercase;
-  margin-left: 25px;
+  margin-left: 2.5rem;
 }
 
 /* ----- HEADING TEXT ----- */
@@ -97,19 +102,19 @@ body {
 
 .heading-primary-main {
   display: block;
-  font-size: 85px;
+  font-size: 8.5rem;
   font-weight: 100;
-  letter-spacing: 30px;
+  letter-spacing: 3rem;
 
   animation: moveInLeft 1.5s ease-out;
 }
 
 .heading-primary-subtext {
   display: block;
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 400;
-  letter-spacing: 17px;
-  margin-bottom: 60px;
+  letter-spacing: 1.7rem;
+  margin-bottom: 6rem;
 
   animation: moveInRight 1.5s ease-out;
 }
@@ -119,7 +124,7 @@ body {
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-50px);
+    transform: translateX(-5rem);
   }
 
   100% {
@@ -131,7 +136,7 @@ body {
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateX(50px);
+    transform: translateX(5rem);
   }
 
   100% {
@@ -143,7 +148,7 @@ body {
 @keyframes moveInBottom {
   0% {
     opacity: 0;
-    transform: translateY(25px);
+    transform: translateY(2.5rem);
   }
 
   100% {
@@ -159,21 +164,21 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   display: inline-block;
-  padding: 15px 40px;
+  padding: 1.5rem 4rem;
   text-align: center;
-  border-radius: 2px;
+  border-radius: 0.2rem;
   transition: all 0.2s;
   position: relative;
 }
 
 .btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 2px 10px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-0.2rem);
+  box-shadow: 0.2rem 1rem 2rem rgba(0, 0, 0, 0.15);
 }
 
 .btn:active {
   transform: translateY(-0.5px);
-  box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0.1rem 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
 
 .btn-white {
@@ -186,7 +191,7 @@ body {
   display: inline-block;
   height: 100%;
   width: 100%;
-  border-radius: 2px;
+  border-radius: 0.2rem;
   position: absolute;
   top: 0;
   left: 0;
