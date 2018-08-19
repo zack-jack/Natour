@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "A website for nature tours",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zackjacksongit/natour.git"
@@ -21,6 +19,9 @@
   "homepage": "https://github.com/zackjacksongit/natour#readme",
   "devDependencies": {
     "browser-sync": "^2.24.6",
-    "gulp": "^3.9.1"
-  }
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.1"
+  },
+  "dependencies": {}
 }

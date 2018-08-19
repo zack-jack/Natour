@@ -1,0 +1,50 @@
+/* ----- HEADER SECTION ----- */
+
+.header {
+  height: 93vh;
+
+  /* ----- HERO IMAGE ----- */
+  background-image: linear-gradient(
+      160deg,
+      rgba($color-primary-light, 0.75),
+      rgba($color-primary-dark, 0.75) 60%
+    ),
+    url("../img/hero.jpg");
+  background-size: cover;
+  background-position: top;
+  position: relative;
+
+  /* ----- ANGLE CUTOUT ----- */
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+  /* ----- LOGO ----- */
+  &__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+  }
+
+  &__logo {
+    float: left;
+    height: 3.5rem;
+  }
+
+  &__company-name {
+    display: inline-block;
+    color: $color-white;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 1.7rem;
+    text-transform: uppercase;
+    margin-left: 2.5rem;
+  }
+
+  /* ----- HEADING TEXT BOX ----- */
+  &__heading-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-18%, -75%);
+    text-align: center;
+  }
+}

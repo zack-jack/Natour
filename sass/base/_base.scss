@@ -1,0 +1,18 @@
+/* ----- BROWSER RESET ----- */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/* ----- BASE STYLES ----- */
+html {
+  /* sets base 10 for easier rem calculations */
+  font-size: 62.5%; /* 10 divided by 16 */
+}
+
+body {
+  box-sizing: border-box;
+}

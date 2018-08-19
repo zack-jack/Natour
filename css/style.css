@@ -1,23 +1,29 @@
-/* ========================= */
-/*       PROJECT COLORS      */
-/* ========================= */
-
 /* ----- COLORS ----- */
-/*
-Light green: #7ed56f;
-Medium green: #55c57a;
-Dark green: #28b485;
-White: #fff;
-*/
+/* ----- GRID ----- */
+/* ----- HEADING ANIMATIONS ----- */
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-5rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
 
-/* ----- FONT COLORS ----- */
-/*
-grey: #777;
-*/
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(5rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
 
-/* ========================= */
-/*       BASE STYLING        */
-/* ========================= */
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(2.5rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
 
 /* ----- BROWSER RESET ----- */
 *,
@@ -25,145 +31,47 @@ grey: #777;
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
-}
+  box-sizing: inherit; }
 
+/* ----- BASE STYLES ----- */
 html {
   /* sets base 10 for easier rem calculations */
-  font-size: 62.5%; /* 10 divided by 16 */
-}
+  font-size: 62.5%;
+  /* 10 divided by 16 */ }
 
+body {
+  box-sizing: border-box; }
+
+/* -- BODY FONT STYLES -- */
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   line-height: 1.7;
   color: #777;
-  padding: 3rem;
-  box-sizing: border-box;
-}
+  padding: 3rem; }
 
-/* ========================= */
-/*       HERO SECTION        */
-/* ========================= */
-
-/* ----- HERO IMAGE ----- */
-
-.header {
-  height: 93vh;
-  background-image: linear-gradient(
-      160deg,
-      rgba(128, 214, 113, 0.75),
-      rgba(40, 180, 131, 0.75) 60%
-    ),
-    url("../img/hero.jpg");
-  background-size: cover;
-  background-position: top;
-  position: relative;
-
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-}
-
-/* ----- LOGO ----- */
-
-.header__logo-box {
-  position: absolute;
-  top: 4rem;
-  left: 4rem;
-}
-
-.header__logo {
-  float: left;
-  height: 3.5rem;
-}
-
-.header__company-name {
-  display: inline-block;
-  color: #fff;
-  font-size: 2rem;
-  font-weight: 400;
-  letter-spacing: 1.7rem;
-  text-transform: uppercase;
-  margin-left: 2.5rem;
-}
-
-/* ----- HEADING TEXT ----- */
-
-.header__heading-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-18%, -75%);
-  text-align: center;
-}
-
+/* -- HEADING TEXT STYLES -- */
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
   /* -- Hack to remove animation shaking -- */
-  backface-visibility: hidden;
-}
-
-.heading-primary--main {
-  display: block;
-  font-size: 8.5rem;
-  font-weight: 100;
-  letter-spacing: 3rem;
-
-  animation: moveInLeft 1.5s ease-out;
-}
-
-.heading-primary--subtext {
-  display: block;
-  font-size: 2rem;
-  font-weight: 400;
-  letter-spacing: 1.7rem;
-  margin-bottom: 6rem;
-
-  animation: moveInRight 1.5s ease-out;
-}
-
-/* ----- HEADING ANIMATIONS ----- */
-
-@keyframes moveInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-5rem);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translate(0);
-  }
-}
-
-@keyframes moveInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(5rem);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translate(0);
-  }
-}
-
-@keyframes moveInBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(2.5rem);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translate(0);
-  }
-}
+  backface-visibility: hidden; }
+  .heading-primary--main {
+    display: block;
+    font-size: 8.5rem;
+    font-weight: 100;
+    letter-spacing: 3rem;
+    animation: moveInLeft 1.5s ease-out; }
+  .heading-primary--subtext {
+    display: block;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 1.7rem;
+    margin-bottom: 6rem;
+    animation: moveInRight 1.5s ease-out; }
 
 /* ----- HEADER BUTTON ----- */
-
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   display: inline-block;
@@ -171,23 +79,24 @@ body {
   text-align: center;
   border-radius: 0.2rem;
   transition: all 0.2s;
-  position: relative;
-}
+  position: relative; }
 
 .btn:hover {
   transform: translateY(-0.2rem);
-  box-shadow: 0.2rem 1rem 2rem rgba(0, 0, 0, 0.15);
-}
+  box-shadow: 0.2rem 1rem 2rem rgba(0, 0, 0, 0.15); }
+  .btn:hover::after {
+    transform: scale(1.08);
+    opacity: 0; }
 
 .btn:active {
   transform: translateY(-0.5px);
-  box-shadow: 0.1rem 0.5rem 1rem rgba(0, 0, 0, 0.15);
-}
+  box-shadow: 0.1rem 0.5rem 1rem rgba(0, 0, 0, 0.15); }
 
 .btn--white {
   background-color: #fff;
-  color: #777;
-}
+  color: #777; }
+  .btn--white::after {
+    background-color: #fff; }
 
 .btn::after {
   content: "";
@@ -199,19 +108,49 @@ body {
   top: 0;
   left: 0;
   z-index: -1;
-  transition: all 2.1s;
-}
-
-.btn--white::after {
-  background-color: #fff;
-}
-
-.btn:hover::after {
-  transform: scale(1.08);
-  opacity: 0;
-}
+  transition: all 2.1s; }
 
 .btn--call-to-action {
   animation: moveInBottom 1.5s ease-out 0.7s;
-  animation-fill-mode: backwards;
-}
+  animation-fill-mode: backwards; }
+
+.row {
+  max-width: 114rem;
+  background-color: #eee;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+
+/* ----- HEADER SECTION ----- */
+.header {
+  height: 93vh;
+  /* ----- HERO IMAGE ----- */
+  background-image: linear-gradient(160deg, rgba(126, 213, 111, 0.75), rgba(40, 180, 133, 0.75) 60%), url("../img/hero.jpg");
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  /* ----- ANGLE CUTOUT ----- */
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  /* ----- LOGO ----- */
+  /* ----- HEADING TEXT BOX ----- */ }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    float: left;
+    height: 3.5rem; }
+  .header__company-name {
+    display: inline-block;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 1.7rem;
+    text-transform: uppercase;
+    margin-left: 2.5rem; }
+  .header__heading-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-18%, -75%);
+    text-align: center; }

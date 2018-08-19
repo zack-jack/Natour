@@ -1,0 +1,37 @@
+/* -- BODY FONT STYLES -- */
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: $color-grey;
+  padding: 3rem;
+}
+
+/* -- HEADING TEXT STYLES -- */
+
+.heading-primary {
+  color: $color-white;
+  text-transform: uppercase;
+  /* -- Hack to remove animation shaking -- */
+  backface-visibility: hidden;
+
+  &--main {
+    display: block;
+    font-size: 8.5rem;
+    font-weight: 100;
+    letter-spacing: 3rem;
+
+    animation: moveInLeft 1.5s ease-out;
+  }
+
+  &--subtext {
+    display: block;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 1.7rem;
+    margin-bottom: 6rem;
+
+    animation: moveInRight 1.5s ease-out;
+  }
+}
