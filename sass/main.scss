@@ -7,18 +7,17 @@
 light-green: #55c57a;
 medium-green: #7ed56f;
 dark-green: #28b485;
+grey-font: #777;
+white-font: #fff;
+black: #000;
 */
 
 $color-primary: #55c57a;
 $color-primary-light: #7ed56f;
 $color-primary-dark: #28b485;
-
-/* ----- FONT COLORS ----- */
-/*
-grey-font: #777;
-*/
-
 $color-grey: #777;
+$color-white: #fff;
+$color-black: #000;
 
 /* ========================= */
 /*       BASE STYLING        */
@@ -66,65 +65,63 @@ body {
   position: relative;
 
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-}
 
-/* ----- LOGO ----- */
+  /* ----- LOGO ----- */
+  &__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+  }
 
-.header__logo-box {
-  position: absolute;
-  top: 4rem;
-  left: 4rem;
-}
+  &__logo {
+    float: left;
+    height: 3.5rem;
+  }
 
-.header__logo {
-  float: left;
-  height: 3.5rem;
-}
+  &__company-name {
+    display: inline-block;
+    color: $color-white;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 1.7rem;
+    text-transform: uppercase;
+    margin-left: 2.5rem;
+  }
 
-.header__company-name {
-  display: inline-block;
-  color: #fff;
-  font-size: 2rem;
-  font-weight: 400;
-  letter-spacing: 1.7rem;
-  text-transform: uppercase;
-  margin-left: 2.5rem;
-}
-
-/* ----- HEADING TEXT ----- */
-
-.header__heading-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-18%, -75%);
-  text-align: center;
+  /* ----- HEADING TEXT ----- */
+  &__heading-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-18%, -75%);
+    text-align: center;
+  }
 }
 
 .heading-primary {
-  color: #fff;
+  color: $color-white;
   text-transform: uppercase;
   /* -- Hack to remove animation shaking -- */
   backface-visibility: hidden;
-}
 
-.heading-primary--main {
-  display: block;
-  font-size: 8.5rem;
-  font-weight: 100;
-  letter-spacing: 3rem;
+  &--main {
+    display: block;
+    font-size: 8.5rem;
+    font-weight: 100;
+    letter-spacing: 3rem;
 
-  animation: moveInLeft 1.5s ease-out;
-}
+    animation: moveInLeft 1.5s ease-out;
+  }
 
-.heading-primary--subtext {
-  display: block;
-  font-size: 2rem;
-  font-weight: 400;
-  letter-spacing: 1.7rem;
-  margin-bottom: 6rem;
+  &--subtext {
+    display: block;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 1.7rem;
+    margin-bottom: 6rem;
 
-  animation: moveInRight 1.5s ease-out;
+    animation: moveInRight 1.5s ease-out;
+  }
 }
 
 /* ----- HEADING ANIMATIONS ----- */
@@ -167,56 +164,58 @@ body {
 
 /* ----- HEADER BUTTON ----- */
 
-.btn:link,
-.btn:visited {
-  text-transform: uppercase;
-  text-decoration: none;
-  display: inline-block;
-  padding: 1.5rem 4rem;
-  text-align: center;
-  border-radius: 0.2rem;
-  transition: all 0.2s;
-  position: relative;
-}
+.btn {
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    padding: 1.5rem 4rem;
+    text-align: center;
+    border-radius: 0.2rem;
+    transition: all 0.2s;
+    position: relative;
+  }
 
-.btn:hover {
-  transform: translateY(-0.2rem);
-  box-shadow: 0.2rem 1rem 2rem rgba(0, 0, 0, 0.15);
-}
+  &:hover {
+    transform: translateY(-0.2rem);
+    box-shadow: 0.2rem 1rem 2rem rgba($color-black, 0.15);
 
-.btn:active {
-  transform: translateY(-0.5px);
-  box-shadow: 0.1rem 0.5rem 1rem rgba(0, 0, 0, 0.15);
-}
+    &::after {
+      transform: scale(1.08);
+      opacity: 0;
+    }
+  }
 
-.btn--white {
-  background-color: #fff;
-  color: $color-grey;
-}
+  &:active {
+    transform: translateY(-0.5px);
+    box-shadow: 0.1rem 0.5rem 1rem rgba($color-black, 0.15);
+  }
 
-.btn::after {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 0.2rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: all 2.1s;
-}
+  &--white {
+    background-color: $color-white;
+    color: $color-grey;
 
-.btn--white::after {
-  background-color: #fff;
-}
+    &::after {
+      background-color: $color-white;
+    }
+  }
 
-.btn:hover::after {
-  transform: scale(1.08);
-  opacity: 0;
-}
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 0.2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 2.1s;
+  }
 
-.btn--call-to-action {
-  animation: moveInBottom 1.5s ease-out 0.7s;
-  animation-fill-mode: backwards;
+  &--call-to-action {
+    animation: moveInBottom 1.5s ease-out 0.7s;
+    animation-fill-mode: backwards;
+  }
 }
