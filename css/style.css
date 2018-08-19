@@ -34,6 +34,12 @@ body {
   padding: 30px;
 }
 
+/* ========================= */
+/*       HERO SECTION        */
+/* ========================= */
+
+/* ----- HERO IMAGE ----- */
+
 .header {
   height: 93vh;
   background-image: linear-gradient(
@@ -43,10 +49,13 @@ body {
     ),
     url("../img/hero-cropped.jpg");
   background-size: cover;
+  background-position: top;
   position: relative;
 
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
+
+/* ----- LOGO ----- */
 
 .logo-box {
   position: absolute;
@@ -69,11 +78,13 @@ body {
   margin-left: 25px;
 }
 
+/* ----- HEADING TEXT ----- */
+
 .heading-box {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-18%, -118%);
+  transform: translate(-18%, -115%);
   text-align: center;
 }
 
