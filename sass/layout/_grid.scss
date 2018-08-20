@@ -1,0 +1,28 @@
+.row {
+  max-width: $grid-width;
+  margin: 0 auto;
+
+  &:not(:last-child) {
+    margin-bottom: $gutter-vertical;
+  }
+
+  @include clearfix;
+
+  .col-1-of-2 {
+    width: calc(7 * (100% - #{$gutter-horizontal}) / 16);
+    float: left;
+
+    &:not(:last-child) {
+      margin-right: $gutter-horizontal;
+    }
+  }
+
+  .col-2-of-2 {
+    width: calc(9 * (100% - #{$gutter-horizontal}) / 16);
+    float: right;
+
+    &:not(:last-child) {
+      margin-left: $gutter-horizontal;
+    }
+  }
+}

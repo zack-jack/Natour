@@ -1,4 +1,4 @@
-/* ----- HEADER BUTTON ----- */
+/* ----- WHITE BUTTON - HEADER ----- */
 
 .btn {
   &:link,
@@ -6,16 +6,18 @@
     text-transform: uppercase;
     text-decoration: none;
     display: inline-block;
-    padding: 1.5rem 4rem;
+    padding: 1.2rem 2.4rem;
     text-align: center;
     border-radius: 0.2rem;
     transition: all 0.2s;
     position: relative;
+    font-size: $default-font-size;
+    letter-spacing: 0.1rem;
   }
 
   &:hover {
     transform: translateY(-0.2rem);
-    box-shadow: 0.2rem 1rem 2rem rgba($color-black, 0.15);
+    box-shadow: $button-shadow-hover;
 
     &::after {
       transform: scale(1.08);
@@ -25,7 +27,7 @@
 
   &:active {
     transform: translateY(-0.5px);
-    box-shadow: 0.1rem 0.5rem 1rem rgba($color-black, 0.15);
+    box-shadow: $button-shadow-active;
   }
 
   &--white {
@@ -53,5 +55,31 @@
   &--call-to-action {
     animation: moveInBottom 1.5s ease-out 0.7s;
     animation-fill-mode: backwards;
+  }
+}
+
+/* ----- GREEN BUTTON - ABOUT SECTION ----- */
+
+.btn-text {
+  &:link,
+  &:visited {
+    font-size: $default-font-size;
+    color: $color-primary;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid $color-primary;
+    padding: 0.5rem;
+  }
+
+  &:hover {
+    background-color: $color-primary;
+    color: $color-white;
+    box-shadow: $button-shadow-hover;
+    transform: translateY(-0.2rem);
+  }
+
+  &:active {
+    box-shadow: $button-shadow-active;
+    transform: translateY(0);
   }
 }

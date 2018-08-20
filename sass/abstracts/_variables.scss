@@ -3,9 +3,26 @@
 $color-primary: #55c57a;
 $color-primary-light: #7ed56f;
 $color-primary-dark: #28b485;
+$color-grey-light-1: #f7f7f7;
 $color-grey: #777;
 $color-white: #fff;
 $color-black: #000;
+
+/* ----- FONT SIZES ----- */
+
+$default-font-size: 1.6rem;
+
+$heading-primary-font-size: 8.5rem;
+$heading-secondary-font-size: 4.1rem;
+$heading-tertiary-font-size: 1.8rem;
+
+/* ----- BUTTON BOX SHADOWS ----- */
+
+// Hover
+$button-shadow-hover: 0.2rem 1rem 2rem rgba($color-black, 0.15);
+
+// Active
+$button-shadow-active: 0.1rem 0.5rem 1rem rgba($color-black, 0.15);
 
 /* ----- GRID ----- */
 
