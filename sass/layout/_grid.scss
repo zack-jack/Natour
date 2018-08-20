@@ -25,4 +25,21 @@
       margin-left: $gutter-horizontal;
     }
   }
+
+  .col-1-of-3 {
+    width: calc((100% - (2 * #{$gutter-horizontal})) / 3);
+    float: left;
+    margin-right: $gutter-horizontal;
+  }
+
+  .col-2-of-3 {
+    width: calc((100% - (2 * #{$gutter-horizontal})) / 3);
+    float: left;
+  }
+
+  .col-3-of-3 {
+    width: calc((100% - (2 * #{$gutter-horizontal})) / 3);
+    float: left;
+    margin-left: $gutter-horizontal;
+  }
 }
