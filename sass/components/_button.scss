@@ -1,6 +1,7 @@
 /* ----- WHITE BUTTON - HEADER ----- */
 
 .btn {
+  &,
   &:link,
   &:visited {
     text-transform: uppercase;
@@ -13,6 +14,10 @@
     position: relative;
     font-size: $default-font-size;
     letter-spacing: 0.1rem;
+
+    //CHANGE FOR THE <BUTTON> ELEMENT
+    border: none;
+    cursor: pointer;
   }
 
   &:hover {
@@ -25,7 +30,9 @@
     }
   }
 
-  &:active {
+  &:active,
+  &:focus {
+    outline: none;
     transform: translateY(-0.5px);
     box-shadow: $button-shadow-active;
   }
