@@ -36,10 +36,11 @@
 .section-book {
   padding: 15rem 0;
   background-image: linear-gradient(
-    to right bottom,
-    $color-primary-light,
-    $color-primary-dark
-  );
+      160deg,
+      rgba($color-primary-light, 0.93),
+      rgba($color-primary-dark, 0.93) 60%
+    ),
+    url("../../img/nat-10.jpg");
 }
 .book {
   background-image: linear-gradient(
