@@ -99,6 +99,10 @@ body {
     font-weight: 100;
     letter-spacing: 3rem;
     animation: moveInLeft 1.5s ease-out; }
+    @media (max-width: 80em) {
+      .heading-primary--main {
+        letter-spacing: 1.8rem;
+        font-size: 9rem; } }
     @media (max-width: 46em) {
       .heading-primary--main {
         letter-spacing: 1.8rem;
@@ -106,14 +110,18 @@ body {
     @media (max-width: 30em) {
       .heading-primary--main {
         letter-spacing: 1rem;
-        font-size: 7rem; } }
+        font-size: 6rem; } }
   .heading-primary--subtext {
     display: block;
-    font-size: 2rem;
+    font-size: 1.75rem;
     font-weight: 400;
     letter-spacing: 1.7rem;
     margin-bottom: 6rem;
     animation: moveInRight 1.5s ease-out; }
+    @media (max-width: 80em) {
+      .heading-primary--subtext {
+        letter-spacing: 1.6rem;
+        font-size: 1.8rem; } }
     @media (max-width: 46em) {
       .heading-primary--subtext {
         letter-spacing: 1.3rem;
@@ -121,7 +129,7 @@ body {
     @media (max-width: 30em) {
       .heading-primary--subtext {
         letter-spacing: 1rem;
-        font-size: 1.6rem; } }
+        font-size: 1.25rem; } }
 
 .heading-secondary {
   font-size: 3.9rem;
@@ -138,7 +146,8 @@ body {
       font-size: 3rem; } }
   @media (max-width: 30em) {
     .heading-secondary {
-      font-size: 2.8rem; } }
+      font-size: 2.6rem;
+      font-weight: 400; } }
 
 .heading-tertiary {
   font-size: 1.8rem;
@@ -758,6 +767,10 @@ body {
     float: left; }
     .row .col-1-of-2:not(:last-child) {
       margin-right: 6rem; }
+      @media (max-width: 80em) {
+        .row .col-1-of-2:not(:last-child) {
+          margin-right: auto;
+          margin-left: 3rem; } }
       @media (max-width: 61.25em) {
         .row .col-1-of-2:not(:last-child) {
           margin-right: 0;
@@ -774,6 +787,9 @@ body {
         .row .col-2-of-2:not(:last-child) {
           margin-left: 0;
           margin-bottom: 6rem; } }
+    @media (max-width: 80em) {
+      .row .col-2-of-2 {
+        margin-right: 2rem; } }
     @media (max-width: 61.25em) {
       .row .col-2-of-2 {
         width: 100% !important; } }
@@ -781,9 +797,14 @@ body {
     width: calc((100% - (2 * 6rem)) / 3);
     float: left;
     margin-right: 6rem; }
+    @media (max-width: 80em) {
+      .row .col-1-of-3 {
+        margin-right: 3rem;
+        margin-left: 3rem; } }
     @media (max-width: 61.25em) {
       .row .col-1-of-3 {
         margin-right: 0;
+        margin-left: 0;
         margin-bottom: 6rem; } }
     @media (max-width: 61.25em) {
       .row .col-1-of-3 {
@@ -802,6 +823,9 @@ body {
     width: calc((100% - (2 * 6rem)) / 3);
     float: left;
     margin-left: 6rem; }
+    @media (max-width: 80em) {
+      .row .col-3-of-3 {
+        margin-left: 3rem; } }
     @media (max-width: 61.25em) {
       .row .col-3-of-3 {
         margin-left: 0;
@@ -814,7 +838,7 @@ body {
 .header {
   height: 93vh;
   /* ----- HERO IMAGE ----- */
-  background-image: linear-gradient(160deg, rgba(126, 213, 111, 0.75), rgba(40, 180, 133, 0.75) 60%), url("../img/hero.jpg");
+  background-image: linear-gradient(160deg, rgba(126, 213, 111, 0.75), rgba(40, 180, 133, 0.75) 60%), url("../img/hero-small.jpg");
   background-size: cover;
   background-position: top;
   position: relative;
@@ -823,17 +847,35 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   /* ----- LOGO ----- */
   /* ----- HEADING TEXT BOX ----- */ }
+  @media (min-resolution: 192dpi) and (min-width: 600px) {
+    .header {
+      background-image: linear-gradient(160deg, rgba(126, 213, 111, 0.75), rgba(40, 180, 133, 0.75) 60%), url("../img/hero.jpg"); } }
+  @media (min-width: 2000px) {
+    .header {
+      background-image: linear-gradient(160deg, rgba(126, 213, 111, 0.75), rgba(40, 180, 133, 0.75) 60%), url("../img/hero.jpg"); } }
   @media (max-width: 61.25em) {
     .header {
       -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
       clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); } }
+  @media (max-width: 46em) {
+    .header {
+      background-size: auto; } }
   .header__logo-box {
     position: absolute;
     top: 4rem;
     left: 4rem; }
+    @media (max-width: 46em) {
+      .header__logo-box {
+        left: 3rem; } }
+    @media (max-width: 30em) {
+      .header__logo-box {
+        left: 2rem; } }
   .header__logo {
     float: left;
     height: 3.5rem; }
+    @media (max-width: 30em) {
+      .header__logo {
+        height: 3rem; } }
   .header__company-name {
     display: inline-block;
     color: #fff;
@@ -842,13 +884,16 @@ body {
     letter-spacing: 1.7rem;
     text-transform: uppercase;
     margin-left: 2.5rem; }
+    @media (max-width: 30em) {
+      .header__company-name {
+        font-size: 1.6rem; } }
   .header__heading-box {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-21%, -73%);
+    transform: translate(-10%, -73%);
     text-align: center; }
-    @media (max-width: 80em) {
+    @media (max-width: 61.25em) {
       .header__heading-box {
         position: absolute;
         top: 50%;
@@ -863,8 +908,8 @@ body {
   height: 5.5rem;
   width: 5.5rem;
   position: fixed;
-  top: 6rem;
-  right: 6.5rem;
+  top: 2.5rem;
+  right: 5rem;
   border-radius: 50%;
   z-index: 3000;
   box-shadow: 0 0.8rem 2.5rem rgba(0, 0, 0, 0.08);
@@ -881,15 +926,15 @@ body {
   @media (max-width: 30em) {
     .navigation__button {
       top: 3rem;
-      right: 5rem; } }
+      right: 3rem; } }
 
 .navigation__background {
   height: 4.5rem;
   width: 4.5rem;
   border-radius: 50%;
   position: fixed;
-  top: 6.5rem;
-  right: 7rem;
+  top: 3rem;
+  right: 6rem;
   background-image: radial-gradient(rgba(85, 197, 122, 0.9), rgba(40, 180, 133, 0.9));
   z-index: 1000;
   transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
@@ -904,7 +949,7 @@ body {
   @media (max-width: 30em) {
     .navigation__background {
       top: 3.5rem;
-      right: 5.5rem; } }
+      right: 4rem; } }
 
 .navigation__nav {
   height: 100vh;

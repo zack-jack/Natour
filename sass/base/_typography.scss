@@ -23,6 +23,11 @@ body {
 
     animation: moveInLeft 1.5s ease-out;
 
+    @include respond(tab-land) {
+      letter-spacing: 1.8rem;
+      font-size: 9rem;
+    }
+
     @include respond(phone-large) {
       letter-spacing: 1.8rem;
       font-size: 8rem;
@@ -30,18 +35,23 @@ body {
 
     @include respond(phone-small) {
       letter-spacing: 1rem;
-      font-size: 7rem;
+      font-size: 6rem;
     }
   }
 
   &--subtext {
     display: block;
-    font-size: 2rem;
+    font-size: 1.75rem;
     font-weight: 400;
     letter-spacing: 1.7rem;
     margin-bottom: 6rem;
 
     animation: moveInRight 1.5s ease-out;
+
+    @include respond(tab-land) {
+      letter-spacing: 1.6rem;
+      font-size: 1.8rem;
+    }
 
     @include respond(phone-large) {
       letter-spacing: 1.3rem;
@@ -50,7 +60,7 @@ body {
 
     @include respond(phone-small) {
       letter-spacing: 1rem;
-      font-size: 1.6rem;
+      font-size: 1.25rem;
     }
   }
 }
@@ -73,7 +83,8 @@ body {
     font-size: 3rem;
   }
   @include respond(phone-small) {
-    font-size: 2.8rem;
+    font-size: 2.6rem;
+    font-weight: 400;
   }
 }
 .heading-tertiary {

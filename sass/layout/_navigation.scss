@@ -8,8 +8,8 @@
     height: 5.5rem;
     width: 5.5rem;
     position: fixed;
-    top: 6rem;
-    right: 6.5rem;
+    top: 2.5rem;
+    right: 5rem;
     border-radius: 50%;
     z-index: 3000;
     box-shadow: 0 0.8rem 2.5rem rgba($color-black, 0.08);
@@ -28,7 +28,7 @@
 
     @include respond(phone-small) {
       top: 3rem;
-      right: 5rem;
+      right: 3rem;
     }
   }
 
@@ -37,8 +37,8 @@
     width: 4.5rem;
     border-radius: 50%;
     position: fixed;
-    top: 6.5rem;
-    right: 7rem;
+    top: 3rem;
+    right: 6rem;
     background-image: radial-gradient(
       rgba($color-primary, 0.9),
       rgba($color-primary-dark, 0.9)
@@ -58,7 +58,7 @@
 
     @include respond(phone-small) {
       top: 3.5rem;
-      right: 5.5rem;
+      right: 4rem;
     }
   }
   &__nav {

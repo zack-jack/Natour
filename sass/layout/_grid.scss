@@ -24,6 +24,11 @@
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
 
+      @include respond(tab-land) {
+        margin-right: auto;
+        margin-left: 3rem;
+      }
+
       @include respond(tab-port) {
         margin-right: 0;
         margin-bottom: $gutter-vertical-small;
@@ -48,6 +53,10 @@
       }
     }
 
+    @include respond(tab-land) {
+      margin-right: 2rem;
+    }
+
     @include respond(tab-port) {
       width: 100% !important;
     }
@@ -58,8 +67,14 @@
     float: left;
     margin-right: $gutter-horizontal;
 
+    @include respond(tab-land) {
+      margin-right: 3rem;
+      margin-left: 3rem;
+    }
+
     @include respond(tab-port) {
       margin-right: 0;
+      margin-left: 0;
       margin-bottom: $gutter-vertical-small;
     }
 
@@ -86,6 +101,10 @@
     width: calc((100% - (2 * #{$gutter-horizontal})) / 3);
     float: left;
     margin-left: $gutter-horizontal;
+
+    @include respond(tab-land) {
+      margin-left: 3rem;
+    }
 
     @include respond(tab-port) {
       margin-left: 0;
