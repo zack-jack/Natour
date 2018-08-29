@@ -5,7 +5,6 @@ body {
   font-weight: 400;
   line-height: 1.7;
   color: $color-grey;
-  padding: 3rem;
 }
 
 /* -- HEADING TEXT STYLES -- */
@@ -23,6 +22,16 @@ body {
     letter-spacing: 3rem;
 
     animation: moveInLeft 1.5s ease-out;
+
+    @include respond(phone-large) {
+      letter-spacing: 1.8rem;
+      font-size: 8rem;
+    }
+
+    @include respond(phone-small) {
+      letter-spacing: 1rem;
+      font-size: 7rem;
+    }
   }
 
   &--subtext {
@@ -33,6 +42,16 @@ body {
     margin-bottom: 6rem;
 
     animation: moveInRight 1.5s ease-out;
+
+    @include respond(phone-large) {
+      letter-spacing: 1.3rem;
+      font-size: 1.8rem;
+    }
+
+    @include respond(phone-small) {
+      letter-spacing: 1rem;
+      font-size: 1.6rem;
+    }
   }
 }
 
@@ -50,6 +69,12 @@ body {
   color: transparent;
   letter-spacing: 0.3rem;
   word-spacing: 1rem;
+  @include respond(tab-port) {
+    font-size: 3rem;
+  }
+  @include respond(phone-small) {
+    font-size: 2.8rem;
+  }
 }
 .heading-tertiary {
   font-size: $heading-tertiary-font-size;
